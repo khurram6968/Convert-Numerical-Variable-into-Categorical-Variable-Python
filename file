@@ -1,0 +1,9 @@
+for dataset in train_test_data:
+    dataset.loc[ dataset['variable'] <= 16, 'variable'] = 0,
+    dataset.loc[(dataset['variable'] > 16) & (dataset['variable'] <= 26), 'variable'] = 1,
+    dataset.loc[(dataset['variable'] > 26) & (dataset['variable'] <= 36), 'variable'] = 2,
+    dataset.loc[(dataset['variable'] > 36) & (dataset['variable'] <= 62), 'variable'] = 3,
+    dataset.loc[ dataset['variable'] > 62, 'variable'] = 4
+   
+   Where 0,1,2,3 and 4 are Categories.
+   Variable: write your variable name.
